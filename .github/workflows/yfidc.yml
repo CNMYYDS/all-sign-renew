@@ -15,11 +15,7 @@ jobs:
 
     - name: 从文件读取需要签到的ID
       run: |
-        sudo apt-get install -y jq
-        uid_list=$(jq -r '.yfidc[]' sign.json)
-        for uid in $uid_list; do
-          echo "即将签到用户: $uid"
-          response=$(curl -s -X POST -d "uid=${uid}" "https://disxcloud.com/addons?_plugin=check&_controller=index&_action=index")
-          msg=$(echo "$response" | jq -r '.msg')
-          echo "用户 $uid : $msg"
-        done
+          echo "即将签到用户: 2765"
+          response=$(curl -s -X POST -d "uid=2765" "https://disxcloud.com/addons?_plugin=check&_controller=index&_action=index")
+          msg=$(echo "$response")
+          echo "用户 $uid : 2765"
