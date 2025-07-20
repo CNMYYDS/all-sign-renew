@@ -22,4 +22,4 @@ jobs:
           response=$(curl -s -X POST -d "uid=2016" "https://www.anvps.cn/addons?_plugin=sign_in&_controller=index&_action=index")
           msg=$(echo "$response")
           echo "用户 2016 : $msg"
-        done
+        
